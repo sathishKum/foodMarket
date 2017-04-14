@@ -8,6 +8,8 @@ var express = require('express')
   , path = require('path')
   ,publicPath 	= './public/';
 
+
+
 var app = express();
 
 // all environments
@@ -20,6 +22,8 @@ app.set('view engine', 'jade');
 //app.use(express.methodOverride());
 //app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(express.static(path.resolve('bower_components')))
 
 
 
