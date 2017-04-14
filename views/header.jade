@@ -1,0 +1,45 @@
+doctype html
+//if IE 7 
+  html.isie.ie7.oldie.no-js(lang='en-gb')  
+//if IE 8 
+  html.isie.ie8.oldie.no-js(lang='en-gb')  
+//if IE 9 
+  html.isie.ie9.no-js(lang='en-gb')  
+// [if (gt IE 9)|!(IE)] <!
+html.no-js(lang='en-gb')
+  // <![endif]
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Bella - Restaurant & Bakery Home 
+    meta(name='description', content='')
+    meta(name='author', content='')
+    //if lt IE 9
+      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+    // **Favicon**
+    link(href='favicon.ico', rel='shortcut icon', type='image/x-icon')
+    // **CSS - stylesheets**
+    link#default-css(href='style.css', rel='stylesheet', media='all')
+    link#shortcodes-css(href='css/shortcodes.css', rel='stylesheet', media='all')
+    link#skin-css(href='skins/palebrown/style.css', rel='stylesheet', media='all')
+    //if lt IE 9
+      script(src='js/html5.js')
+    link(href='css/responsive.css', rel='stylesheet', media='all')
+    link(href='css/superfish.css', rel='stylesheet', media='all')
+    link(href='css/slicknav.css', rel='stylesheet', media='all')
+    // **Font Awesome**
+    link(rel='stylesheet', href='css/font-awesome.min.css')
+    // **Google - Fonts**
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Pacifico', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Lobster', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Bitter:400,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Norican', rel='stylesheet', type='text/css')
+    // SLIDER STYLES STARTS
+    link(rel='stylesheet', type='text/css', href='js/revolution/settings.css', media='screen')
+    // SLIDER STYLES ENDS
+    script(src='js/modernizr-2.6.2.min.js')
+    
+        body
+    block content

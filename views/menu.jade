@@ -1,0 +1,700 @@
+extends header
+block content
+    // main-content div Starts here
+    .main-content
+      // wrapper div Starts here
+      .wrapper
+        // top bar div Starts here
+        .top-bar
+          .container
+            .float-left
+              p
+                i.fa.fa-phone
+                | Call : 888-654-3210
+            .float-right
+              ul.cart
+                li
+                  a(href='#')
+                    i.fa.fa-sign-in
+                    | Sign in
+                  |  (or) 
+                  a(href='#') Logout
+                li
+                  i.fa.fa-shopping-cart
+                  | (0) items in cart | ($0.00)
+        // top bar div Ends here
+        // header div Starts here
+        header.header1
+          .container
+            a#logo(href='/')
+            nav#main-menu.sf-menu
+              ul
+                li.menu-item.current-page-item
+                  a(href='/') Home
+                  ul.sub-menu
+                    li.menu-item
+                      a(href='/') Home layout 1
+                    li.menu-item
+                      a(href='home-layout2.html') Home layout 2
+                    li.menu-item
+                      a(href='home-layout3.html') Home layout 3
+                li.menu-item
+                  a(href='/menu') Menu
+                li.menu-item
+                  a(href='/shop') Shop
+                 
+               
+                li.menu-item
+                  a(href='contact.html') Contact
+          .header-bottom
+        // header div Ends here
+        // breadcrumb div Starts here
+        section.breadcrumb-wrapper
+          .container
+            h1.page-title Menu
+            .float-right.breadcrumb
+              a(href='index.html') Home
+              span /
+              h2 Menu
+        // breadcrumb div Ends here
+        .main-container
+          .container
+            section#primary.content-full-width.menu-items-list
+              #page-menu-sticky
+                .container
+                  ul.menu-categories
+                    li
+                      .cat-item
+                        a(href='#breakfast')
+                          span.item-one
+                          br
+                          | breakfast
+                      a.star(href='#')
+                        span.fa.fa-star-o
+                          span
+                    li
+                      .cat-item
+                        a(href='#lunch')
+                          span.item-two
+                          br
+                          | Lunch
+                      a.star(href='#')
+                        span.fa.fa-star-o
+                          span
+                    li
+                      .cat-item
+                        a(href='#dinner')
+                          span.item-three
+                          br
+                          | Dinner
+                      a.star(href='#')
+                        span.fa.fa-star-o
+                          span
+                    li
+                      .cat-item
+                        a(href='#desserts')
+                          span.item-four
+                          br
+                          | Desserts
+                      a.star(href='#')
+                        span.fa.fa-star-o
+                          span
+                    li
+                      .cat-item
+                        a(href='#cakes')
+                          span.item-five
+                          br
+                          | Cakes
+                      a.star(href='#')
+                        span.fa.fa-star-o
+                          span
+                    li
+                      .cat-item
+                        a(href='#ice-creams')
+                          span.item-six
+                          br
+                          | Ice Creams
+                      a.star(href='#')
+                        span.fa.fa-star-o
+                          span
+              .margin70
+              h2#breakfast.block-title-bor Breakfast
+              .dt-sc-one-half.column.first
+                .menu
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Tomato Special Fry - 1 Plate
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+                .menu.last
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Olives with Spices
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+              .dt-sc-one-half.column
+                .menu
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Little Rolls of Ham Stuffect
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+                .menu.last
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Fish and Salmon Eggs
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+              .margin50
+              .top
+                h2#lunch.block-title-bor Lunch
+                a.scrollTop(href='#top') top
+              .dt-sc-one-half.column.first
+                .menu
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Boku Light
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+                .menu.last
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Bitter Sweet - 1 Plate
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+              .dt-sc-one-half.column
+                .menu
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Salad Greens and Vegetables
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+                .menu.last
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Veg Special - 1 Plate
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+              .margin50
+              .top
+                h2#dinner.block-title-bor Dinner
+                a.scrollTop(href='#top') top
+              .dt-sc-one-half.column.first
+                .menu
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Grill Chicken Steak
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+                .menu.last
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Rice Spaghetti with Vegetables
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+              .dt-sc-one-half.column
+                .menu
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Pasta spaghetti
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+                .menu.last
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Tomato Special Fry - 1 Plate
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+              .margin50
+              .top
+                h2#desserts.block-title-bor Desserts
+                a.scrollTop(href='#top') top
+              .dt-sc-one-half.column.first
+                .menu
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Chocolate banana
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+                .menu.last
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Potato Croquettes
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+              .dt-sc-one-half.column
+                .menu.last
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Chocolate banana
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+                .menu.last
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Fruit salad 
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+              .margin50
+              .top
+                h2#cakes.block-title-bor Cakes
+                a.scrollTop(href='#top') top
+              .dt-sc-one-half.column.first
+                .menu
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Cheesecake
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+                .menu.last
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Shrimp Salad Greens
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+              .dt-sc-one-half.column
+                .menu
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Cake With Berries
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+                .menu.last
+                  .dt-sc-one-third.column.first
+                    .entry-thumb
+                      a(href='#')
+                        span.border.rotate
+                        .border
+                          span.top-right
+                          img(title='', alt='', src='http://placehold.it/321&text=Menu')
+                          span.code Code:TOMFRY
+                          span.bottom-left
+                  .dt-sc-two-third.column
+                    .entry-detail
+                      h3
+                        a(href='#') Vegetable Salad
+                      span.price $25.00
+                      p
+                        | Roin a bibendum nibh. Nunc fermentum sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis...
+              .margin50
+              .top
+                h2#ice-creams.block-title-bor Ice Creams
+                a.scrollTop(href='#top') top
+              .dt-sc-one-half.column.first
+                .offer
+                  .dt-sc-one-fifth.column.first
+                    .entry-thumb
+                      a(href='#')
+                        figure
+                          img(src='http://placehold.it/136&text=Menu', alt='', title='')
+                          .image-mask
+                  .dt-sc-four-fifth.column
+                    .entry-detail
+                      h3 3 Glass combo
+                      p Sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis
+                      .price
+                        ins $25.00
+                .offer
+                  .dt-sc-one-fifth.column.first
+                    .entry-thumb
+                      a(href='#')
+                        figure
+                          img(src='http://placehold.it/136&text=Menu', alt='', title='')
+                          .image-mask
+                  .dt-sc-four-fifth.column
+                    .entry-detail
+                      h3 Butterfly Pea Softdrink
+                      p Sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis
+                      .price
+                        ins $25.00
+                .offer.last
+                  .dt-sc-one-fifth.column.first
+                    .entry-thumb
+                      a(href='#')
+                        figure
+                          img(src='http://placehold.it/136&text=Menu', alt='', title='')
+                          .image-mask
+                  .dt-sc-four-fifth.column
+                    .entry-detail
+                      h3 Strawberry Delight
+                      p Sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis
+                      .price
+                        ins $25.00
+              .dt-sc-one-half.column
+                .offer
+                  .dt-sc-one-fifth.column.first
+                    .entry-thumb
+                      a(href='#')
+                        figure
+                          img(src='http://placehold.it/136&text=Menu', alt='', title='')
+                          .image-mask
+                  .dt-sc-four-fifth.column
+                    .entry-detail
+                      h3 Veg Fried Salad
+                      p Sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis
+                      .price
+                        ins $25.00
+                .offer
+                  .dt-sc-one-fifth.column.first
+                    .entry-thumb
+                      a(href='#')
+                        figure
+                          img(src='http://placehold.it/136&text=Menu', alt='', title='')
+                          .image-mask
+                  .dt-sc-four-fifth.column
+                    .entry-detail
+                      h3 Coool Cola
+                      p Sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis
+                      .price
+                        ins $25.00
+                .offer.last
+                  .dt-sc-one-fifth.column.first
+                    .entry-thumb
+                      a(href='#')
+                        figure
+                          img(src='http://placehold.it/136&text=Menu', alt='', title='')
+                          .image-mask
+                  .dt-sc-four-fifth.column
+                    .entry-detail
+                      h3 Hot Dogs 4pc
+                      p Sit amet mi nec consequat. Praesent porttitor nulla sit amet dui lobortis
+                      .price
+                        ins $25.00
+              .margin40
+        .footer-top
+          span.driver-logo
+        footer
+          .container
+            .dt-sc-one-fourth.column.first
+              aside.widget.hotel-timing
+                h3.widgettitle Hotel Hours
+                ul
+                  li
+                    span.day Monday: 
+                    |  10 am - 10 pm
+                  li
+                    span.day Tuesday: 
+                    |  10 am - 10 pm
+                  li
+                    span.day Wednesday: 
+                    |  10 am - 10 pm
+                  li
+                    span.day Thursday: 
+                    |  10 am - 10 pm
+                  li
+                    span.day Friday: 
+                    |  10 am - 10 pm
+                  li
+                    span.day Saturday: 
+                    |  10 am - 10 pm
+                  li
+                    span.day Sunday: 
+                    |  Holiday
+                span.closed CLOSED Mondays & Tuesday 
+            .dt-sc-one-fourth.column
+              aside.widget.hotel-booking
+                h3.widgettitle Make a Booking
+                ul
+                  li
+                    h4 Lunch Timings:
+                    p Wed - Sat|12.00pm - 3pm
+                  li
+                    h4 Dinner Timings:
+                    p
+                      | Tue - Sun|5.30pm-10.00 pm 
+                      span BOOKINGS CLOSED on Mondays & Tuesday
+                a.dt-sc-button.small.theme-btn(href='#') Book Now
+            .dt-sc-one-half.column
+              h3.widgettitle Contact Us
+              .dt-sc-one-half.column.first
+                aside.widget.widget_text
+                  #footer_map  
+              .dt-sc-one-half.column
+                aside.widget.widget_text
+                  p
+                    span.fa.fa-map-marker
+                    strong Address:
+                    |  143 - 158, Bernie Road, Kansas, US
+                  p
+                    span.fa.fa-phone
+                    strong Phone:
+                    |  020 7326 4987
+                  p
+                    span.fa.fa-envelope
+                    strong Mail:
+                    a(href='#') enquiries@gmail.com
+                aside.widget.social-icons
+                  h3.widgettitle We are Social:
+                  ul
+                    li
+                      a(href='#')
+                        img(src='images/sociable/hover/twitter.png', alt='twitter.png', title='')
+                        img(src='images/sociable/twitter.png', alt='twitter.png', title='')
+                    li
+                      a(href='#')
+                        img(src='images/sociable/hover/google.png', alt='twitter.png', title='')
+                        img(src='images/sociable/google.png', alt='twitter.png', title='')
+                    li
+                      a(href='#')
+                        img(src='images/sociable/hover/facebook.png', alt='twitter.png', title='')
+                        img(src='images/sociable/facebook.png', alt='twitter.png', title='')
+                    li
+                      a(href='#')
+                        img(src='images/sociable/hover/pinterest.png', alt='twitter.png', title='')
+                        img(src='images/sociable/pinterest.png', alt='twitter.png', title='')
+          .footer-info
+            .container
+              p.copyright
+                | © 2013 
+                a(href='http://themeforest.net/user/BuddhaThemes/portfolio')  BuddhaThemes
+                | . Bella Motel
+              ul.footer-links
+                li
+                  a(href='index.html') Home
+                  | /
+                li
+                  a(href='menu.html') Menu
+                  | /
+                li
+                  a(href='shop.html') Shop
+                  | /
+                li
+                  a(href='about.html') About
+                  | /
+                li
+                  a(href='features.html') Features
+                  | /
+                li
+                  a(href='blog.html') Blog
+                  | /
+                li
+                  a(href='shortcodes.html') Shortcodes
+                  | /
+                li
+                  a(href='contact.html') Contact
+      // wrapper div Ends here
+    // main-content div Ends here
+    // Java Scripts
+    script(type='text/javascript', src='js/jquery-1.10.2.min.js')
+    script(type='text/javascript', src='js/jquery-migrate-1.2.1.min.js')
+    script(type='text/javascript', src='js/jquery-easing-1.3.js')
+    script(type='text/javascript', src='js/jquery-smoothscroll.js')
+    script(type='text/javascript', src='js/jquery.sticky.js')
+    script(type='text/javascript', src='js/jquery.nav.js')
+    script(type='text/javascript', src='js/superfish.min.js')
+    script(type='text/javascript', src='js/hoverIntent.js')
+    script(type='text/javascript', src='js/jquery.slicknav.min.js')
+    script(type='text/javascript', src='js/jquery.carouFredSel-6.2.1-packed.js')
+    script(type='text/javascript', src='js/jquery.tabs.min.js')
+    script(src='http://maps.google.com/maps/api/js?sensor=false')
+    script(src='js/jquery.gmap.min.js')
+    script(src='js/custom.js')

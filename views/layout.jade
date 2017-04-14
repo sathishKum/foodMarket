@@ -1,46 +1,5 @@
-doctype html
-//if IE 7 
-  html.isie.ie7.oldie.no-js(lang='en-gb')  
-//if IE 8 
-  html.isie.ie8.oldie.no-js(lang='en-gb')  
-//if IE 9 
-  html.isie.ie9.no-js(lang='en-gb')  
-// [if (gt IE 9)|!(IE)] <!
-html.no-js(lang='en-gb')
-  // <![endif]
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-    title Bella - Restaurant & Bakery Home 
-    meta(name='description', content='')
-    meta(name='author', content='')
-    //if lt IE 9
-      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
-    // **Favicon**
-    link(href='favicon.ico', rel='shortcut icon', type='image/x-icon')
-    // **CSS - stylesheets**
-    link#default-css(href='style.css', rel='stylesheet', media='all')
-    link#shortcodes-css(href='css/shortcodes.css', rel='stylesheet', media='all')
-    link#skin-css(href='skins/palebrown/style.css', rel='stylesheet', media='all')
-    //if lt IE 9
-      script(src='js/html5.js')
-    link(href='css/responsive.css', rel='stylesheet', media='all')
-    link(href='css/superfish.css', rel='stylesheet', media='all')
-    link(href='css/slicknav.css', rel='stylesheet', media='all')
-    // **Font Awesome**
-    link(rel='stylesheet', href='css/font-awesome.min.css')
-    // **Google - Fonts**
-    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', rel='stylesheet', type='text/css')
-    link(href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700', rel='stylesheet', type='text/css')
-    link(href='http://fonts.googleapis.com/css?family=Pacifico', rel='stylesheet', type='text/css')
-    link(href='http://fonts.googleapis.com/css?family=Lobster', rel='stylesheet', type='text/css')
-    link(href='http://fonts.googleapis.com/css?family=Bitter:400,700', rel='stylesheet', type='text/css')
-    link(href='http://fonts.googleapis.com/css?family=Norican', rel='stylesheet', type='text/css')
-    // SLIDER STYLES STARTS
-    link(rel='stylesheet', type='text/css', href='js/revolution/settings.css', media='screen')
-    // SLIDER STYLES ENDS
-    script(src='js/modernizr-2.6.2.min.js')
-  body
+extends header
+block content
     // main-content div Starts here
     .main-content
       // wrapper div Starts here
@@ -67,116 +26,24 @@ html.no-js(lang='en-gb')
         // header div Starts here
         header.header1
           .container
-            a#logo(href='index.html')
+            a#logo(href='/')
             nav#main-menu.sf-menu
               ul
                 li.menu-item.current-page-item
-                  a(href='index.html') Home
+                  a(href='/') Home
                   ul.sub-menu
                     li.menu-item
-                      a(href='index.html') Home layout 1
+                      a(href='/') Home layout 1
                     li.menu-item
                       a(href='home-layout2.html') Home layout 2
                     li.menu-item
                       a(href='home-layout3.html') Home layout 3
                 li.menu-item
-                  a(href='menu.html') Menu
+                  a(href='/menu') Menu
                 li.menu-item
-                  a(href='shop-three-col.html') Shop
-                  ul.sub-menu
-                    li.menu-item
-                      a(href='shop-two-col.html') II column
-                      ul.sub-menu
-                        li.menu-item
-                          a(href='shop-two-col.html') Without Sidebar
-                        li.menu-item
-                          a(href='shop-two-col-with-right-sidebar.html') With Right Sidebar
-                        li.menu-item
-                          a(href='shop-two-col-with-left-sidebar.html') With Left Sidebar
-                    li.menu-item
-                      a(href='shop-three-col.html') III column
-                      ul.sub-menu
-                        li.menu-item
-                          a(href='shop-three-col.html') Without Sidebar
-                        li.menu-item
-                          a(href='shop-three-col-with-right-sidebar.html') With Right Sidebar
-                        li.menu-item
-                          a(href='shop-three-col-with-left-sidebar.html') With Left Sidebar
-                    li.menu-item
-                      a(href='shop-four-col.html') IV column
-                      ul.sub-menu
-                        li.menu-item
-                          a(href='shop-four-col.html') Without Sidebar
-                        li.menu-item
-                          a(href='shop-four-col-with-right-sidebar.html') With Right Sidebar
-                        li.menu-item
-                          a(href='shop-four-col-with-left-sidebar.html') With Left Sidebar
-                    li.menu-item
-                      a(href='shop-detail.html') Shop Detail
-                li.menu-item
-                  a(href='about.html') Pages
-                  ul.sub-menu
-                    li.menu-item
-                      a(href='about.html') About
-                    li.menu-item
-                      a(href='reservation.html') Reservation
-                li.menu-item
-                  a(href='features.html') Features
-                li.menu-item
-                  a(href='blog-one-col.html') Blog
-                  ul.sub-menu
-                    li.menu-item
-                      a(href='blog-one-col.html') I column
-                      ul.sub-menu
-                        li.menu-item
-                          a(href='blog-one-col.html') Without Sidebar
-                        li.menu-item
-                          a(href='blog-one-col-with-right-sidebar.html') With Right Sidebar
-                        li.menu-item
-                          a(href='blog-one-col-with-left-sidebar.html') With Left Sidebar
-                    li.menu-item
-                      a(href='blog-two-col.html') II column
-                      ul.sub-menu
-                        li.menu-item
-                          a(href='blog-two-col.html') Without Sidebar
-                        li.menu-item
-                          a(href='blog-two-col-with-right-sidebar.html') With Right Sidebar
-                        li.menu-item
-                          a(href='blog-two-col-with-left-sidebar.html') With Left Sidebar
-                    li.menu-item
-                      a(href='blog-three-col.html') III column
-                      ul.sub-menu
-                        li.menu-item
-                          a(href='blog-three-col.html') Without Sidebar
-                        li.menu-item
-                          a(href='blog-three-col-with-right-sidebar.html') With Right Sidebar
-                        li.menu-item
-                          a(href='blog-three-col-with-left-sidebar.html') With Left Sidebar
-                    li.menu-item
-                      a(href='blog-detail.html') Blog Detail
-                li.menu-item
-                  a(href='shortcodes.html') Shortcodes
-                  ul.sub-menu
-                    li.menu-item
-                      a(href='buttons.html') Buttons
-                    li.menu-item
-                      a(href='column.html') Column
-                    li.menu-item
-                      a(href='orderedists.html') Ordered Lists
-                    li.menu-item
-                      a(href='unorderedists.html') Unordered Lists
-                    li.menu-item
-                      a(href='quotes.html') Quotes
-                    li.menu-item
-                      a(href='dropcaps.html') Dropcaps
-                    li.menu-item
-                      a(href='progress-bars.html') Progress Bars
-                    li.menu-item
-                      a(href='pricing-table.html') Pricing Table
-                    li.menu-item
-                      a(href='fancyboxes.html') Fancy Boxes 
-                    li.menu-item
-                      a(href='tabs-toggles.html') Tabs & Toggles 
+                  a(href='/shop') Shop
+                 
+               
                 li.menu-item
                   a(href='contact.html') Contact
           .header-bottom
@@ -586,7 +453,7 @@ html.no-js(lang='en-gb')
                   a(href='index.html') Home
                   | /
                 li
-                  a(href='menu.html') Menu
+                  a(href='/menu') Menu
                   | /
                 li
                   a(href='shop.html') Shop
