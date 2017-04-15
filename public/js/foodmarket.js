@@ -76,6 +76,8 @@ pos.controller('newProductController', function ($scope, $location, $route, Inve
 });
 
 pos.controller('editProductController', function ($scope, $location, $routeParams, Inventory, upload) {
+	
+	alert(4)
     
   // get and set inventory
   Inventory.getProduct($routeParams.productId).then(function (product) {
