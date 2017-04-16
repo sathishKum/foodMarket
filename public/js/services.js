@@ -19,6 +19,9 @@ pos.service('Inventory', ['$http', function ($http) {
           return res.data;
         });
     };
+    
+    
+    
 
     this.getProduct = function (productId) {
         var url = apiInventoryAddress + '/product/' + productId;
@@ -56,6 +59,15 @@ pos.service('Inventory', ['$http', function ($http) {
           return res.data;
         });
     };
+    
+    
+    this.createCategory = function (newCategory){
+    	return $http.post(apiInventoryAddress + '/category',newCategory).then(function(res){
+    		
+    		 return res.data;
+    		
+    	});
+    }
 
     this.removeProduct = function (productId) {
         return $http.delete(apiInventoryAddress + '/product/' + productId).then(function (res) {

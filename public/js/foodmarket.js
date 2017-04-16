@@ -57,6 +57,8 @@ pos.controller('inventoryController', function ($scope, $location, Inventory) {
 pos.controller('newProductController', function ($scope, $location, $route, Inventory) {
   
   $scope.addMultipleProducts = false;
+  
+  $scope.status = 'initial';
 
   $scope.createProduct = function (product) {
 	  
@@ -65,8 +67,8 @@ pos.controller('newProductController', function ($scope, $location, $route, Inve
     
     Inventory.createProduct($scope.newProduct).then(function (product) {
 
-      if ($scope.addMultipleProducts) refreshForm();
-      else $location.path('/inventory');
+    	if(product != null)
+	    	$scope.status = 'Success';
       
     });
 
@@ -77,6 +79,32 @@ pos.controller('newProductController', function ($scope, $location, $route, Inve
   };
 
 });
+
+
+pos.controller('newCategoryController', function ($scope, $location, $route, Inventory) {
+	  
+	  $scope.addMultipleProducts = false;
+	  
+	  $scope.status = 'initial';
+
+	  $scope.createCategory = function () {
+		  
+		 // alert(JSON.stringify($scope.newCategory))
+		  
+	    Inventory.createCategory($scope.newCategory).then(function (data) {
+	    	//alert(JSON.stringify(data._id))
+	    	if(data != null)
+	    	$scope.status = 'Success';
+	      
+	    });
+
+	  };
+
+	  var refreshForm = function () {
+	    $scope.newCategory = {};
+	  };
+
+	});
 
 pos.controller('editProductController', function ($scope, $location, $routeParams, Inventory, upload) {
 	

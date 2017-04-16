@@ -28,6 +28,11 @@ pos.config(['$routeProvider',
                 templateUrl: 'templates/inventory/create-product.html',
                 controller: 'newProductController'
               }).
+              
+              when('/admin/category', {
+                  templateUrl: 'templates/inventory/create-category.html',
+                  controller: 'newCategoryController'
+                }).
         
         otherwise({
           redirectTo: '/'
