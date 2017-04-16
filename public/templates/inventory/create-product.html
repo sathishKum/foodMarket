@@ -1,0 +1,27 @@
+<div class="dt-sc-two-third column first">
+                            <div class="corner">
+                                <span class="top-right"></span>
+                               
+                                <span class="bottom-left"></span>
+                            </div>
+                            <div class="margin50"></div>
+                             <div ng-if="status=='Success'" class="success-box">Successfully created !</div>
+                             
+                            <h3 id="reply-title">Create a product</h3>
+                            <div id="ajax_response_msg"></div>
+                            <form name="frmcontact" ng-submit="createProduct()" class="contact-frm" method="post">
+                                <div class="dt-sc-one-half column first">
+                                    <input type="text" required placeholder="Product Name" ng-model="newProduct.name" name="name" />
+                                   <!--  <input type="text" required placeholder="Product category" ng-model="newProduct.category" name="category" /> -->
+                                   <select ng-model="newProduct.category" ng-options="x.name as x.name for x in categories">
+									</select>
+                                   
+                                    <input type="hidden" ng-init="newProduct.type='product'"  placeholder="Product category" ng-model="newProduct.type" name="product" />
+                                    
+                                </div>
+                                <div class="dt-sc-one-half column">
+                                    
+                                    <input type="submit" value="Submit" name="btnsubmit" class="small theme-btn dt-sc-button" />
+                                </div>
+                            </form>
+                        </div>

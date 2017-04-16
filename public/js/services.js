@@ -31,6 +31,14 @@ pos.service('Inventory', ['$http', function ($http) {
     };
     
     
+    this.getCategoryList = function () {
+        var url = apiInventoryAddress + '/categories/category';
+        return $http.get(url).then(function (res) {
+          return res.data;
+        });
+    };
+    
+    
     this.getProducts = function (productName) {
         var url = apiInventoryAddress + '/product/' + productName;
         return $http.get(url).then(function (res) {

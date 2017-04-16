@@ -59,6 +59,15 @@ pos.controller('newProductController', function ($scope, $location, $route, Inve
   $scope.addMultipleProducts = false;
   
   $scope.status = 'initial';
+  
+  
+  Inventory.getCategoryList().then(function (products) {
+  	
+  	//alert(JSON.stringify(products));
+  	
+    $scope.categories = angular.copy(products);
+   // $scope.inventoryLastUpdated = new Date();
+  });
 
   $scope.createProduct = function (product) {
 	  
@@ -86,6 +95,11 @@ pos.controller('newCategoryController', function ($scope, $location, $route, Inv
 	  $scope.addMultipleProducts = false;
 	  
 	  $scope.status = 'initial';
+	  
+	  
+
+
+	  
 
 	  $scope.createCategory = function () {
 		  

@@ -1,0 +1,29 @@
+<div class="dt-sc-two-third column first">
+                            <div class="corner">
+                                <span class="top-right"></span>
+                               
+                                <span class="bottom-left"></span>
+                            </div>
+                            <div class="margin50"></div>
+                            
+                            <div ng-if="status=='Success'" class="success-box">Successfully created !</div>
+                        
+                           
+                        </div>
+                        <div class="margin30"></div>
+                            <h3 id="reply-title">Create a food category</h3>
+                            <div id="ajax_response_msg"></div>
+                            <form name="frmcontact" ng-submit="createCategory()" class="contact-frm" method="post">
+                                <div class="dt-sc-one-half column first">
+                                    <input type="text" required placeholder="category Name" ng-model="newCategory.name" name="name" />
+                                    <input type="hidden" ng-init="newCategory.type='category'"  required placeholder="Product category" ng-model="newCategory.type" value="category" name="category" />
+                                    
+                                </div>
+                                <div class="dt-sc-one-half column">
+                                    
+                                    <input type="submit" value="Submit" name="btnsubmit" class="small theme-btn dt-sc-button" />
+                                </div>
+                            </form>
+                            
+                             <div class="margin40"></div>
+                        </div>
