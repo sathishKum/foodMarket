@@ -12,7 +12,8 @@ pos.config(['$routeProvider',
         }).
         
         when('/menu', {
-          templateUrl: 'templates/menu.html'
+          templateUrl: 'templates/menu.html',
+          controller: 'inventoryController'
         }).
         
         when('/shop', {
@@ -22,6 +23,11 @@ pos.config(['$routeProvider',
           when('/shopdetail', {
               templateUrl: 'templates/shop-detail.html'
             }).
+            
+            when('/admin/product', {
+                templateUrl: 'templates/inventory/create-product.html',
+                controller: 'newProductController'
+              }).
         
         otherwise({
           redirectTo: '/'

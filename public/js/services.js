@@ -12,8 +12,10 @@ pos.service('Inventory', ['$http', function ($http) {
 
     var apiInventoryAddress = '/api/inventory';
 
-    this.getProducts = function () {
+    this.getAllProducts = function () {
+    	
         return $http.get(apiInventoryAddress + '/products').then(function (res) {
+        
           return res.data;
         });
     };
@@ -46,7 +48,11 @@ pos.service('Inventory', ['$http', function ($http) {
     };
 
     this.createProduct = function (newProduct) {
+    	
+    	
+    	//alert(newProduct)
         return $http.post(apiInventoryAddress + '/product', newProduct).then(function (res) {
+        	//alert(1)
           return res.data;
         });
     };

@@ -41,16 +41,16 @@ pos.controller('body', function ($scope, $location, Settings) {
 // Inventory Section
 
 pos.controller('inventoryController', function ($scope, $location, Inventory) {
+	
+	//alert(Inventory.getProducts())
 
   // get and set inventory
-  Inventory.getProducts().then(function (products) {
+  Inventory.getAllProducts().then(function (products) {
     $scope.inventory = angular.copy(products);
+   //alert("-- " + products)
   });
 
-  // go to edit page
-  $scope.editProduct = function (productId) {
-    $location.path('/inventory/product/' + productId);
-  };
+ 
 
 });
 
@@ -59,6 +59,9 @@ pos.controller('newProductController', function ($scope, $location, $route, Inve
   $scope.addMultipleProducts = false;
 
   $scope.createProduct = function (product) {
+	  
+	  
+	  
     
     Inventory.createProduct($scope.newProduct).then(function (product) {
 

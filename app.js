@@ -23,12 +23,12 @@ app.set('port', process.env.PORT || 3000);
 //app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.static(path.resolve('bower_components')))
+app.use(express.static(path.resolve('bower_components')));
 
-
+app.use('/api', require('./api'));
 
 app.get('/', function (req, res) {
-	res.sendFile(path.resolve(__dirname, publicPath, 'index.html'))
+	res.sendFile(path.resolve(__dirname, publicPath, 'index.html'));
 });
 //app.get('/users', user.list);
 
