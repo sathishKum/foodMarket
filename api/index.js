@@ -12,3 +12,4 @@ app.get('/', function (req, res) {
 
 app.use('/inventory', require('./inventory'));
 app.use('/transactions', require('./transactions'));
+app.use('/user', require('./userManagement'));

@@ -85,6 +85,31 @@ pos.service('Inventory', ['$http', function ($http) {
 
 }]);
 
+
+pos.service('Profile',['$http',function($http){
+	
+	var apiProfileAddress = '/api/user';
+	
+	this.register = function(profile){
+		
+		//alert(profile)
+		
+		return $http.post(apiProfileAddress+ '/addUser',profile).then(function(res){
+			return res.data;
+		});
+		
+	}
+	
+	this.login = function(profile){
+		
+		return $http.post(apiProfileAddress+ '/login' , profile).then(function(res){
+			return res.data;
+		});
+	}
+	
+	
+}]);
+
 pos.service('Transactions', ['$http', function ($http, Inventory) {
 
     var transactionApiUrl = '/api/transactions/';

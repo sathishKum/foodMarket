@@ -54,7 +54,7 @@
 
 <body ng-controller="body">
 
-
+{{loginStatus}}
 	<!-- main-content div Starts here -->
 	<div class="main-content">
         <!-- wrapper div Starts here -->
@@ -67,7 +67,9 @@
                     </div>
                     <div class="float-right">
                         <ul class="cart">
-                            <li><a href="#"><i class="fa fa-sign-in"></i>Sign in</a> (or) <a href="#">Logout</a> </li>
+                            <li>
+                            <a ng-if="loginStatus == 'undefined'" href="#/login"><i class="fa fa-sign-in"></i>Sign in</a> 
+                            <a ng-if="loginStatus == 'true'" href="#/logout">Hi, {{name}}. Not {{name}}, logout </a> </li>
                             <li><i class="fa fa-shopping-cart"></i>(0) items in cart | ($0.00)</li>
                         </ul>
                     </div>

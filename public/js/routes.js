@@ -33,6 +33,16 @@ pos.config(['$routeProvider',
                   templateUrl: 'templates/inventory/create-category.html',
                   controller: 'newCategoryController'
                 }).
+                
+                when('/login', {
+                    templateUrl: 'templates/login.html',
+                    controller: 'loginController'
+                    
+                    	
+                  }).
+                  
+                  
+          
         
         otherwise({
           redirectTo: '/'

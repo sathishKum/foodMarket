@@ -24,13 +24,20 @@ var socket = io.connect(serverAddress);
 ////////////////// Controllers ////////////////// //
 ////////////////////////////////////////////////////
 
-pos.controller('body', function ($scope, $location, Settings) {
+pos.controller('body', function ($rootScope, $scope, $location, Settings) {
 	
-	
+	$scope.loginStatus= 'false';
+	$scope.name = 'N/A';
   
   $scope.onHomePage = function () {
     return ($location.path() === '/' || $location.path() === '#/');
   };
+  
+  $rootScope.$on('loginStatus', function (event, data) {
+	  $scope.name = 'sathish';
+	  $scope.loginStatus = 'true';
+	    console.log(data); 
+	  });
 
   Settings.get().then(function (settings) {
     $scope.settings = settings;
@@ -50,6 +57,57 @@ pos.controller('inventoryController', function ($scope, $location, Inventory) {
    //alert("-- " + products)
   });
 
+ 
+
+});
+
+
+pos.controller('loginController', function ($rootScope, $scope, $location, Profile) {
+	
+	
+	$scope.showform = 'login';
+	
+	$scope.status = 'initial';
+	
+	$scope.showLogin = function(){
+
+		$scope.showform = 'login';
+	}
+	
+	$scope.showRegister = function(){
+		$scope.showform = 'register';
+	}
+	
+	
+	$scope.register = function(profile){
+		
+		//alert(1)
+		
+		Profile.register(profile).then(function(data){
+			
+			//alert(data)
+			
+			$scope.status = data;
+			
+		});
+		
+		
+		
+	}
+	
+	$scope.login = function(profile){
+		Profile.login(profile).then(function(data){
+			
+			$scope.status = data;
+			
+			console.log("fadf"+data);
+			
+			$rootScope.$emit('loginStatus', 'Success');
+			
+			 $location.path('/');
+			
+		});
+	}
  
 
 });
@@ -122,7 +180,7 @@ pos.controller('newCategoryController', function ($scope, $location, $route, Inv
 
 pos.controller('editProductController', function ($scope, $location, $routeParams, Inventory, upload) {
 	
-	alert(4)
+	//alert(4)
     
   // get and set inventory
   Inventory.getProduct($routeParams.productId).then(function (product) {
