@@ -12,6 +12,7 @@
                             <form name="frmcontact" ng-submit="createProduct()" class="contact-frm" method="post">
                                 <div class="dt-sc-one-half column first">
                                     <input type="text" required placeholder="Product Name" ng-model="newProduct.name" name="name" />
+                                    <input type="text" required placeholder="Product Price" ng-model="newProduct.price" name="price" />
                                    <!--  <input type="text" required placeholder="Product category" ng-model="newProduct.category" name="category" /> -->
                                    <select ng-model="newProduct.category" ng-options="x.name as x.name for x in categories">
 									</select>

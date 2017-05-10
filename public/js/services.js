@@ -100,9 +100,23 @@ pos.service('Profile',['$http',function($http){
 		
 	}
 	
+	
+	this.logout = function(){
+		return $http.get(apiProfileAddress+ '/logout').then(function(res){
+			return res.data;
+		});
+		
+	}
+	
 	this.login = function(profile){
 		
 		return $http.post(apiProfileAddress+ '/login' , profile).then(function(res){
+			return res.data;
+		});
+	}
+	
+	this.validatelogin  =  function(){
+		return $http.get(apiProfileAddress+ '/loginInfo' ).then(function(res){
 			return res.data;
 		});
 	}
@@ -153,6 +167,56 @@ pos.service('Transactions', ['$http', function ($http, Inventory) {
         });
     };
 
+}]);
+
+pos.service('Cart',['$http',function($http){
+	
+	
+	var cartAPIUrl = '/api/cart';
+	
+	
+	this.add = function(productId){
+		
+		
+		return $http.get(cartAPIUrl + '/add/'+productId).then(function(res){
+			
+			console.log('returndata ---->'+res.data);
+			return res.data;
+			
+		});
+		
+	}
+
+  this.remove = function(productId){
+    return $http.get(cartAPIUrl + '/remove/'+productId).then(function(res){
+			
+			console.log('returndata ---->'+res.data);
+			return res.data;
+			
+		});
+  }
+
+
+  this.getCart = function(){
+    return $http.get(cartAPIUrl + '/getCart').then(function(res){
+      return res.data;
+    });
+  }
+
+  this.order = function(user){
+
+    return $http.post(cartAPIUrl + '/order',user).then(function(res){
+      return res.data;
+    });
+
+  }
+		
+	this.viewOrder = function(){
+    return $http.get(cartAPIUrl + '/getInvoice').then(function(res){
+      return res.data;
+    });
+  }	
+	
 }]);
 
 pos.service('Settings', ['$http', function ($http) {

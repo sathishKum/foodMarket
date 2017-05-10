@@ -1,0 +1,39 @@
+
+<link id="default-css" href="login-style.css" rel="stylesheet" media="all" />
+
+
+
+<div style="padding-top: 1%;"></div>
+
+
+
+<div class="login-page" style="padding-top: 15%;">
+  <div class="form">
+  
+  
+  <div ng-if="status == 'saved'" class="success-box">Yay! User created successfully</div>
+
+<div ng-if="status == 'exist'" class="error-box">Sorry! User already exist</div>
+<div ng-if="status == 'same'" class="error-box">Password and confirm password is different</div>
+  
+  
+    <form ng-if="showform == 'register'" ng-submit="register(profile)" class="login-form">
+      <input type="text" required ng-model="profile.name" ng-minlength="3" placeholder="name"/>
+      <input type="password" required ng-model="profile.password" ng-minlength="3" placeholder="password"/>
+      <input type="password" required ng-model="profile.confirmpassword" ng-minlength="3" placeholder="confirm password"/>
+      
+     
+      <input type="email" required ng-model="profile.email" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a ng-click="showLogin()" href="javascript:void(0)">Sign In</a></p>
+    </form>
+    <form ng-if="showform == 'login'" ng-submit="login(profile)" class="login-form">
+      <input type="text" ng-model="profile.username" placeholder="username"/>
+      <input type="password" ng-model="profile.password" placeholder="password"/>
+      <button>login</button>
+      <p class="message">Not registered? <a ng-click="showRegister()" href="javascript:void(0)">Create an account</a></p>
+    </form>
+  </div>
+</div>
+
+<div style="padding-bottom: 5%;"></div>

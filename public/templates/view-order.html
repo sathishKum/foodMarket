@@ -1,0 +1,66 @@
+<div class="margin70"/>
+
+
+<h1 style="text-align:center;" class="block-title">View Orders</h1>
+
+<div class="row">
+
+
+
+    
+	<div class="col-md-12" ng-repeat="inv in invoice">
+                
+
+		<table class="table table-striped" border="0">
+
+			<thead>
+				<tr>
+                   <h3> {{inv.created_on | date:'medium'}} </h3> <br/>
+					<th style="border-bottom: 1px solid #ddd;"> Item name</th>
+					<th style="border-bottom: 1px solid #ddd;">Quantity</th>
+					<th style="border-bottom: 1px solid #ddd;">Price</th>
+					
+				</tr>
+			</thead>
+
+			<tbody ng-init="total=0.0" >
+				<tr  ng-repeat="item in inv.items">
+					<td style="border-bottom: 1px solid #ddd;border-right:0px">{{item.name}}</td>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px">{{item.quantity}}</td>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px">RS {{item.price}} </td>
+					
+				</tr>
+				<tr>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px;text-align:left;">
+						<strong>Total</strong>
+					</td>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px">               </td>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px" >RS {{inv.total}} </td>
+					
+				</tr>
+
+                <tr>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px;text-align:left;">
+						<strong>Delivery Address</strong>
+					</td>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px;text-align:left;" > 
+                        Name: {{inv.shipped_to.name}}  <br>
+                        Email: {{inv.shipped_to.email}} <br>
+                        Address: {{inv.shipped_to.address}} 
+                         
+                                    </td>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px" > </td>
+					
+				</tr>
+			</tbody>
+
+		</table>
+
+
+
+	</div>
+
+
+
+
+<div class="margin70"/>

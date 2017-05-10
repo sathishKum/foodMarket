@@ -44,7 +44,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Norican' rel='stylesheet' type='text/css'>
-    
+   
     <!-- SLIDER STYLES STARTS -->
 	<link rel="stylesheet" type="text/css" href="js/revolution/settings.css" media="screen" />
     <!-- SLIDER STYLES ENDS -->
@@ -54,7 +54,7 @@
 
 <body ng-controller="body">
 
-{{loginStatus}}
+
 	<!-- main-content div Starts here -->
 	<div class="main-content">
         <!-- wrapper div Starts here -->
@@ -68,9 +68,9 @@
                     <div class="float-right">
                         <ul class="cart">
                             <li>
-                            <a ng-if="loginStatus == 'undefined'" href="#/login"><i class="fa fa-sign-in"></i>Sign in</a> 
-                            <a ng-if="loginStatus == 'true'" href="#/logout">Hi, {{name}}. Not {{name}}, logout </a> </li>
-                            <li><i class="fa fa-shopping-cart"></i>(0) items in cart | ($0.00)</li>
+                            <a ng-if="loginStatus == 'false'" href="#/login"><i class="fa fa-sign-in"></i>Sign in</a> 
+                            <a ng-if="loginStatus == 'true'" ng-click="logout()" href="#">Hi, {{name}}. Not {{name}}, logout </a> </li>
+                            <li> <a href="#/cart"><i class="fa fa-shopping-cart"></i>({{cart.items.length}}) items in cart | (RS {{cart.price}})</a></li>
                         </ul>
                     </div>
                 </div>
@@ -86,8 +86,8 @@
                                
                             </li>
                             <li class="menu-item"><a href="#/menu">Menu</a></li>
-                            <li class="menu-item"><a href="#/shop">Shop</a>
-                            <li class="menu-item"><a href="contact.html">Contact</a></li>
+                             <li class="menu-item"><a href="#/vieworder">View Order</a></li>
+                             
                              <li class="menu-item"><a href="#/admin/category">Create Category</a></li>
                             <li class="menu-item"><a href="#/admin/product">Create Product</a></li>
                         </ul>

@@ -14,6 +14,18 @@ var inventoryDB = new Datastore({
 	autoload: true 
 })
 
+
+
+app.getInventory = function(productId, callback){
+
+	inventoryDB.find({_id : productId}, function(err, product) {
+
+			callback(err,product[0]);
+
+	});
+
+}
+
 // GET inventory
 app.get('/', function (req, res) {
 	res.send('Inventory API')

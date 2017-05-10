@@ -1,0 +1,61 @@
+<div class="margin70"/>
+
+
+<h1 style="text-align:center;" class="block-title">Cart</h1>
+
+<div class="row">
+
+
+
+    
+	<div class="col-md-12">
+                
+
+		<table class="table table-striped" border="0">
+
+			<thead>
+				<tr>
+					<th style="border-bottom: 1px solid #ddd;">Item name</th>
+					<th style="border-bottom: 1px solid #ddd;">Quantity</th>
+					<th style="border-bottom: 1px solid #ddd;">Price</th>
+					<th style="border-bottom: 1px solid #ddd;border-right:0px"/>
+				</tr>
+			</thead>
+
+			<tbody >
+				<tr ng-repeat="item in cart.items">
+					<td style="border-bottom: 1px solid #ddd;border-right:0px">{{item.name}}</td>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px">{{item.quantity}}</td>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px">RS {{item.price}} </td>
+					<td align="right" style="border-bottom: 1px solid #ddd;border-right:0px">
+						<a href="#" ng-click="remove(productId)" ng-value="productId='{{item.product_id}}'">
+							<span class="btn btn-danger trash">
+								remove
+							</span>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px;text-align:left;">
+						<strong>Total</strong>
+					</td>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px">               </td>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px">RS {{cart.price}} </td>
+					<td align="right" style="border-bottom: 1px solid #ddd;border-right:0px">              </td>
+				</tr>
+			</tbody>
+
+		</table>
+
+
+
+	</div>
+
+<div class="dt-sc-buy-now" style="float:right;">
+            <a href="#/checkout" class="theme-btn dt-sc-button small">Checkout</a>
+        </div>
+
+</div>
+
+
+<div class="margin70"/>

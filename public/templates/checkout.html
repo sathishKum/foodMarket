@@ -1,0 +1,110 @@
+<div class="margin70"/>
+
+
+<div ng-if="orderStatus == 'true'" class="success-box">Order SuccessFully Created! Your Food will be delivered in short time</div>
+
+
+<h1 style="text-align:center;" class="block-title">Checkout</h1>
+
+<div class="row">
+
+   
+	<div class="col-md-12">
+
+
+		<table class="table table-striped" border="0">
+
+			<thead>
+				<tr>
+					<th style="border-bottom: 1px solid #ddd;">Item name</th>
+					<th style="border-bottom: 1px solid #ddd;">Quantity</th>
+					<th style="border-bottom: 1px solid #ddd;">Price</th>
+					
+				</tr>
+			</thead>
+
+			<tbody >
+				<tr ng-repeat="item in cart.items">
+					<td style="border-bottom: 1px solid #ddd;border-right:0px">{{item.name}}</td>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px">{{item.quantity}}</td>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px">RS {{item.price}} </td>
+					
+				</tr>
+				<tr>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px">
+						<strong>Total</strong>
+					</td>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px">               </td>
+					<td style="border-bottom: 1px solid #ddd;border-right:0px">RS {{cart.price}} </td>
+					
+				</tr>
+			</tbody>
+
+		</table>
+
+
+
+	</div>
+
+
+</div>
+
+
+
+
+
+
+
+<h1 style="text-align:center;" class="block-title">Shipping Address</h1>
+
+    <div class="main-container">
+                <div class="container">
+                    <section id="primary" class="content-full-width menu-items-list">
+                        <h2 class="block-title">Enter New Address</h2>
+                        <div class="dt-sc-one-half column first">
+                            <div id="ajax_response_msg"></div>
+                            <form name="frmreserve" class="reserve-frm" ng-submit="order(user)" >
+                                <p>
+                                    <label> Name *</label>
+                                    <input type="text" required placeholder="Enter Name" ng-model="user.name" name="txtfname">
+                                </p>
+                                <p>
+                                    <label>Email Address *</label>
+                                    <input type="text" required placeholder="Enter Email" ng-model="user.email" name="txtemail">
+                                </p>
+                                
+                                <p>
+                                    <label>Address *</label>
+                                    <textarea placeholder="Enter Address" required ng-model="user.address" name="txtmessage"></textarea>
+                                </p>
+                                <input type="submit" name="btnreserve" class="small theme-btn dt-sc-button" value="order">
+                            </form>
+                        </div>
+                        <div class="dt-sc-one-half column">
+                            <div class="dt-sc-one-fifth column first">
+                            </div>
+                            <div class="dt-sc-four-fifth column">
+                                <div class="border corner reservation-detail">
+                                    <div class="content-bg">
+                                        <h2>Reservation Discounts</h2>
+                                        <p><span class="dropcap dropcap-default ">B</span>ella’s Ice cream porro quisquam est, qui dolorem ipsum 		quia dolor sit amet, consectetur, adipisci velit, sed quia 	non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Duis blandit nibh a velit lacinia, a ullamcorper turpis fermentum. </p>
+                                        <ul class="items">
+                                            <li><a href="#"><span class="number">1</span>Jannie’s Latte Carmel - <span class="price">$15.00</span></a></li>
+                                            <li><a href="#"><span class="number">2</span>Bella Cupcake - <span class="price">$15.00</span></a></li>
+                                            <li><a href="#"><span class="number">3</span>Motel Made Desserts - <span class="price">$15.00</span></a></li>
+                                        </ul>
+                                        <img src="images/reserve-add.png" alt="" title="" />
+                                        <span class="bottom-left"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margin40"></div>
+                    </section>
+                </div>
+            </div>
+            
+
+
+
+<div class="margin70"/>

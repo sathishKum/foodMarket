@@ -1,2 +1,6 @@
-{"type":"product","name":"idli","category":"breakfast","_id":"AincTaLjgHNb6x05"}
-{"type":"category","name":"breakfast","_id":"F1FR9uiv2n0futjf"}
+{"type":"category","name":"dinner","_id":"9fTJrSDhiw2TBVq4"}
+{"type":"product","name":"poori","price":"30","category":"breakfast","_id":"IGrW1taI39ojmel6"}
+{"type":"product","name":"meals","price":"234","category":"lunch","_id":"XqJdpYTzqW183N4p"}
+{"type":"category","name":"breakfast","_id":"nJB1TyTSGQDO8c33"}
+{"type":"category","name":"lunch","_id":"q23Soj9GhqWLaTUu"}
+{"type":"product","name":"idli","price":"23","category":"breakfast","_id":"tYX8jNFrTjN4FToZ"}

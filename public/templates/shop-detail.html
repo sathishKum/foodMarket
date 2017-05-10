@@ -11,29 +11,23 @@
                                 </div>
                                 <div class="dt-sc-one-half column">
                                     <div class="summary entry-summary">
-                                    <a href="#" class="product_meta">Vegeterian</a>
-                                        <h2 class="product_title entry-title">Tuna Chops Per Plate</h2>
-                                        <P class="price"><span class="amount">$25.00</span></P>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                                        <form action="#" class="cart">
+                                    <a href="#/menu" class="product_meta">{{inventory.category}}</a>
+                                        <h2 class="product_title entry-title">{{inventory.name}}</h2>
+                                        <P class="price"><span class="amount">RS.{{inventory.price}}</span></P>
+                                        <p>{{inventory.desc}}</p>
+                                        <form action="#" ng-submit="addtocart()"  class="cart">
+                                       
+                                        <input type="text" ng-hide="true" ng-model="cart.productid" ng-init="cart.productid=inventory._id" ng-value="{{inventory._id}}" >
                                             <div class="dt-sc-one-third column first">
-                                                <label>Select Quantity</label>
+                                               <!--  <label>Select Quantity</label>
                                                 <select>
                                                     <option>3</option>
                                                     <option>4</option>
                                                     <option>5</option>
-                                                </select>
+                                                </select> -->
                                                 <input type="submit" value="add to cart" class="small theme-btn dt-sc-button">
                                             </div>
-                                            <div class="dt-sc-two-third column">
-                                                <label>Select Variety</label>
-                                                <select>
-                                                    <option>Spicy</option>
-                                                    <option>Spicy 1</option>
-                                                    <option>Spicy 2</option>
-                                                </select>
-                                                <input type="submit" value="add to wishlist" class="small theme-btn dt-sc-button">
-                                            </div>
+                                            
                                         </form>
                                     </div>
                                 </div>
