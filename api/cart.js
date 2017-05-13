@@ -405,7 +405,7 @@ app.post('/order',function(req,res){
 
       createInvoice(fields, cart,function(err,invoice){
 
-        response.clearCookie('cartId');
+        res.clearCookie('cartId');
         res.send(invoice);
 
       });
